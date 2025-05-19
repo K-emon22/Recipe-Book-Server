@@ -17,8 +17,6 @@ const uri =
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
   },
 });
 
@@ -26,12 +24,15 @@ async function run() {
   try {
     await client.connect();
 
-    await client.db("admin").command({ping: 1});
-    console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
-    );
-  } finally {
-    await client.close();  
+    const database = client.db("Recipes");
+    const recipeCollection = database.collection("foods");
+
+    app.get("/recipes", async (req, res) => {
+      const recipes = await recipeCollection.find().toArray();
+      res.send(recipes);
+    });
+  } catch (error) {
+    console.error("❌ MongoDB Error:", error);
   }
 }
 run().catch(console.dir);
@@ -40,6 +41,6 @@ app.get("/", (req, res) => {
   res.send("Backend is walking");
 });
 
-app.listen("/", (req, res) => {
+app.listen(port, () => {
   console.log(`backend is running on port ${port} `);
 });
