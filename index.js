@@ -21,10 +21,10 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
 
-    const database = client.db("Recipes");
-    const recipeCollection = database.collection("foods");
+    const database = client.db("Allrecipes");
+    const recipeCollection = database.collection("AllFoods");
 
     app.get("/recipes", async (req, res) => {
       const recipes = await recipeCollection.find().toArray();
