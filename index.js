@@ -74,7 +74,7 @@ async function run() {
       const id = req.params.id;
       const remove = await recipeCollection.deleteOne({_id: new ObjectId(id)});
       res.send(remove);
-    });
+    }); 
 
     app.get("/sortSix", async (req, res) => {
       const topSix = await recipeCollection
