@@ -84,7 +84,7 @@ async function run() {
         .toArray();
 
       res.send(topSix);
-    });
+    });    
   } catch (error) {
     console.error("❌ MongoDB Error:", error);
   }
