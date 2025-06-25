@@ -1,31 +1,37 @@
 
-# 🍽️ Recipe Book - Backend
+⸻
 
-This is the backend API for the **Recipe Book** project, built with **Node.js**, **Express**, and **MongoDB**.
+
+# 🍽️ Recipe Book - Backend API
+
+This is the backend server for the **Recipe Book** project, built with **Node.js**, **Express**, and **MongoDB**. It provides a RESTful API to manage and interact with recipe data.
 
 ---
 
-## 🚀 Setup Instructions
+## 🚀 Getting Started
 
-1. **Clone the repository**
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/K-emon22/Recipe-Book-Server.git
 cd Recipe-Book-Server
 
-	2.	Install dependencies
+2. Install Dependencies
 
 npm install
 
-	3.	Create a .env file in the root folder with the following content:
+3. Configure Environment Variables
+
+Create a .env file in the root directory and add the following:
 
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 
-	4.	Run the server
+4. Start the Server
 
 node index.js
 
+The server will run on http://localhost:3000 by default.
 
 ⸻
 
@@ -63,8 +69,15 @@ GET	/sortSix	Get top 6 recipes by like count
 ⚙️ Technologies Used
 	•	Node.js
 	•	Express.js
-	•	MongoDB (with MongoDB Atlas)
+	•	MongoDB (using MongoDB Atlas)
 	•	dotenv
 	•	CORS
+
+⸻
+
+🧑‍💻 Author
+
+Md Emon Sheikh
+GitHub Profile »
 
 ⸻
