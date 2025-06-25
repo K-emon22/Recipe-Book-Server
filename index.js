@@ -20,7 +20,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // await client.connect();
-    
+
 
     const database = client.db("Allrecipes");
     const recipeCollection = database.collection("AllFoods");
@@ -35,6 +35,7 @@ async function run() {
       const result = await recipeCollection.findOne({_id: new ObjectId(id)});
       res.send(result);
     });
+    
 
     app.post("/recipes", async (req, res) => {
       const newRecipe = req.body;
