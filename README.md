@@ -78,6 +78,6 @@ GET	/sortSix	Get top 6 recipes by like count
 ## 🧑‍💻 Author
 
 **Md Emon Sheikh**  
-[GitHub Profile »](https://github.com/K-emon22)
+[GitHub Profile](https://github.com/K-emon22)
 
 ⸻
